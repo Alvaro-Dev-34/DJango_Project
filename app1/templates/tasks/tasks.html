@@ -1,16 +1,17 @@
-{% extends 'layouts/base2.html' %}
+{% extends 'layouts/base.html' %}
 
 {% block content %}
 <h1>Tasks</h1>
 
 {% for task in tasks %}
-<div>
+<div class="card">
     <h1>{% if task.done == False %} 🕑 {% else %} ✅ {% endif %}
         {{task.title}} </h1>
-
-    <p>{{task.description}}</p>
-    <p>Project: {{task.projects_id}}</p>
-    <button>Delete</button>
+    <a>{{task.description}}</a>
+    <a>Project: {{task.projects_id}}</a>
+    <button name="action" value="delete">
+        Delete
+    </button>
     <button>✅ Done</button>
 </div>
 {% endfor %}
