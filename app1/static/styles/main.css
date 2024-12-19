@@ -18,8 +18,10 @@ body {
 }
 
 .navbar ul li a{
-    color: #FFFFFF ;
+    margin-right: 260px;
+    color: #FFFFFF;
     text-decoration-none;
+
 }
 
 .navbar ul li a:hover{

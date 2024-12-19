@@ -5,14 +5,10 @@
 
 {% for task in tasks %}
 <div class="card">
-    <h1>{% if task.done == False %} 🕑 {% else %} ✅ {% endif %}
-        {{task.title}} </h1>
-    <a>{{task.description}}</a>
+    <h1>{{task.title}} </h1>
+    <a>desc: {{task.description}}</a>
+    <br><br>
     <a>Project: {{task.projects_id}}</a>
-    <button name="action" value="delete">
-        Delete
-    </button>
-    <button>✅ Done</button>
 </div>
 {% endfor %}
 {% endblock %}
